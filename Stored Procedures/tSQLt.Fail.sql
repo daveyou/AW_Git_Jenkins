@@ -2,7 +2,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
----Build+
 CREATE PROCEDURE [tSQLt].[Fail]
     @Message0 NVARCHAR(MAX) = '',
     @Message1 NVARCHAR(MAX) = '',
@@ -54,5 +53,4 @@ BEGIN
         
    RAISERROR('tSQLt.Failure',16,10);
 END;
----Build-
 GO

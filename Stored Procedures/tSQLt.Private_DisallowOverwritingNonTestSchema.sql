@@ -2,7 +2,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
----Build+
 CREATE PROCEDURE [tSQLt].[Private_DisallowOverwritingNonTestSchema]
   @ClassName NVARCHAR(MAX)
 AS
@@ -12,5 +11,4 @@ BEGIN
     RAISERROR('Attempted to execute tSQLt.NewTestClass on ''%s'' which is an existing schema but not a test class', 16, 10, @ClassName);
   END
 END;
----Build-
 GO

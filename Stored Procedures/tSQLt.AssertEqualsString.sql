@@ -12,8 +12,10 @@ BEGIN
       RETURN 0;
 
     DECLARE @Msg NVARCHAR(MAX);
-    SELECT @Msg = 'Expected: <' + ISNULL(@Expected, 'NULL') + 
-                  '> but was: <' + ISNULL(@Actual, 'NULL') + '>';
+    SELECT @Msg = CHAR(13)+CHAR(10)+
+                  'Expected: ' + ISNULL('<'+@Expected+'>', 'NULL') +
+                  CHAR(13)+CHAR(10)+
+                  'but was : ' + ISNULL('<'+@Actual+'>', 'NULL');
     EXEC tSQLt.Fail @Message, @Msg;
 END;
 GO

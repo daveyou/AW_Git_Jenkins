@@ -2,7 +2,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
----Build+
 CREATE PROCEDURE [tSQLt].[NewTestClass]
     @ClassName NVARCHAR(MAX)
 AS
@@ -25,5 +24,4 @@ BEGIN
     RAISERROR(@ErrMsg, @ErrSvr, 10);
   END CATCH;
 END;
----Build-
 GO

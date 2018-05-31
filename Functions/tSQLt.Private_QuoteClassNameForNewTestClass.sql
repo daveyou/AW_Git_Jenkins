@@ -2,7 +2,6 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
----Build+
 CREATE FUNCTION [tSQLt].[Private_QuoteClassNameForNewTestClass](@ClassName NVARCHAR(MAX))
   RETURNS NVARCHAR(MAX)
 AS
@@ -12,5 +11,4 @@ BEGIN
          ELSE QUOTENAME(@ClassName)
      END;
 END;
----Build-
 GO
