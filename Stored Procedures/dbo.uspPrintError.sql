@@ -17,7 +17,7 @@ BEGIN
           ', Severity ' + CONVERT(varchar(5), ERROR_SEVERITY()) +
           ', State ' + CONVERT(varchar(5), ERROR_STATE()) + 
           ', Procedure ' + ISNULL(ERROR_PROCEDURE(), '-') + 
-          ', Line ' + CONVERT(varchar(77), ERROR_LINE());
+          ', Line ' + CONVERT(varchar(50), ERROR_LINE());
     PRINT ERROR_MESSAGE();
 END;
 GO
