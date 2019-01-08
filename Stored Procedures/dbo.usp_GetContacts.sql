@@ -10,8 +10,7 @@ CREATE PROCEDURE [dbo].[usp_GetContacts]
 -- WITH ENCRYPTION, RECOMPILE, EXECUTE AS CALLER|SELF|OWNER| 'user_name'
 AS
      SELECT BusinessEntityID,
-            PersonType,
-            NameStyle,
+         
             Title,
             FirstName,
             MiddleName,
